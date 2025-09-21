@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const person = {
+        //     name: "Huy",
+        //     age: 30,
+        //     job: "Developer"
+        // }
+
+
+        // Read
+        // Hãy lấy ra tên của đối tượng trên
+        // let something = "age"
+        // console.log("lấy ra thông qua dấu .", person.name)
+        // console.log("lấy ra thông qua dấu []", person.[something])
+
+        // Update: cập nhật thông qua key muốn thay đổi
+        // person.job = "tiktoker"
+        // console.log(person)
+
+        // Delete
+        // delete person.age
+        // console.log(person)
+
+
+
+        let accounts = [
+            {
+                username: "Huy",
+                passwword: "123456",
+                isLocked: false,
+            },
+            {
+                username: "Duong",
+                password: "abc",
+                isLocked: true,
+            }
+        ];
+
+        // Nhập thông tin đăng nhập từ người dùng, hãy kiểm tra và trả về thông báo người dùng đăng nhập thành công hay thất bại
+        let username = prompt("Nhập vào username của bạn")
+        let password = prompt("Nhập vào username của bạn")
+
+        // Không có giá trị username
+        if(!username)
+        console.log("usernam không được để trống")
+
+        // Không có giá trị password
+        if(!password)
+        console.log("password không được để trống")
+
+        for(let i = 0; i< accounts.length; i++) {
+            if (accounts[i].username === username)
+            if (accounts[i].password === password)
+            console.log("Đăng nhập thành công")
+        }
+        else {
+            console.log("Bạn đã nhập sai mật khẩu")
+        }
+        else {
+            console.log("Tài khoản không tồn tại")
+        }
+
+
+        let isSuccess = false; // Kỹ thuật gắn cờ
+        for (let i = 0; i <accounts.length; i++) {
+            if (
+                accounts[i].username === username &&
+                accounts[i].password === password
+            ) {
+                isSuccess = true
+                console.log("Đăng nhập thành công")
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
